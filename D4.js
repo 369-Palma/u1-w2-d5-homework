@@ -164,6 +164,18 @@ for (let i = 0; i < starWarsCharacters.length; i++) {
     case "blue":
       eyeColor.blue.push(starWarsCharacters[i]);
       break;
+    case "yellow":
+      eyeColor.yellow.push(starWarsCharacters[i]);
+      break;
+      case "brown":
+        eyeColor.brown.push(starWarsCharacters[i]);
+        break;
+        case "red":
+          eyeColor.red.push(starWarsCharacters[i]);
+          break;
+        default "blue-gray":
+        eyeColor.red.push(starWarsCharacters[i]);
+          break;
   }
 }
 /* ESERCIZIO 6
