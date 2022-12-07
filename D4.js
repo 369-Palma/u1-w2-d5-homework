@@ -154,11 +154,12 @@ console.log(eye.Color) */
 /* ESERCIZIO 6
     Usa un while loop per calcolare la massa totale dell'equipaggio
   */
-console.log(starWarsCharacters.length);
-/* let massaTot
-while(starWarsCharacters.length< ){
 
-} */
+let massaTot = 0;
+while (starWarsCharacters.length > 10) {
+  massaTot = massTot + starWarsCharacters[i].massa;
+  console.log("la massa totale è:", massaTot);
+}
 /* ESERCIZIO 7
   
   Crea uno switch statement per rivelare la tipologia di carico, utilizzando la massa totale, di un'impotetica astronave contenente i personaggi dell'array "starWarsCharacters"
