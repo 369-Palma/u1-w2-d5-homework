@@ -174,7 +174,7 @@ for (let i = 0; i < starWarsCharacters.length; i++) {
           eyeColor.red.push(starWarsCharacters[i]);
           break;
         default "blue-gray":
-        eyeColor.red.push(starWarsCharacters[i]);
+        eyeColor["blue-gray"].push(starWarsCharacters[i]);
           break;
   }
 }
