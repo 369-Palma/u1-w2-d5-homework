@@ -119,7 +119,18 @@ console.log(characters);
     Seguendo i passaggi precedenti crea un array chiamato "femaleCharacters" e inserisci solo oggetti di personaggi femminili con questa struttura di esempio: 
     {name: Leia Organa, hair_color: "brown", eye_color: "brown"}
   */
-
+const femaleCharacters = [];
+for (i = 0; i < starWarsCharacters.length; i++) {
+  if (starWarsCharacters[i].gender === "female") {
+    femaleCharacters.push(i);
+    console.log(
+      "name:",
+      starWarsCharacters[i].name + " " + "hair_color:",
+      starWarsCharacters[i].hair_color + " " + "eye_color:",
+      starWarsCharacters[i].eye_color
+    );
+  }
+}
 /* ESERCIZIO 4
     Crea un oggetto "eyeColor" che abbia come proprietà: blue, yellow, brown, red, blue-gray.
     ognuna di queste proprietà contiene un array vuoto
