@@ -111,7 +111,7 @@ const characters = [];
   Usa il valore contenuto inserendolo nell'array creato precedentemente. 
   Come risultato dovresti ottenere qualcosa di simile: ["Luke Skywalker", "C-3PO", "R2-D2", etc..]
   */
-for (i = 0; i < starWarsCharacters.length; i++) {
+for (let i = 0; i < starWarsCharacters.length; i++) {
   characters.push(starWarsCharacters[i].name);
 }
 console.log(characters);
@@ -120,7 +120,7 @@ console.log(characters);
     {name: Leia Organa, hair_color: "brown", eye_color: "brown"}
   */
 const femaleCharacters = [];
-for (i = 0; i < starWarsCharacters.length; i++) {
+for (let i = 0; i < starWarsCharacters.length; i++) {
   if (starWarsCharacters[i].gender === "female") {
     femaleCharacters.push(i);
     console.log(
@@ -135,31 +135,40 @@ for (i = 0; i < starWarsCharacters.length; i++) {
     Crea un oggetto "eyeColor" che abbia come proprietà: blue, yellow, brown, red, blue-gray.
     ognuna di queste proprietà contiene un array vuoto
   */
-/* const eyeColor = {
-    blue = [],
-    yellow = [],
-    brown = [],
-    red = [],
-    ["blue-gray"] = [] 
-}
+const eyeColor = {
+  blue: [],
+  yellow: [],
+  brown: [],
+  red: [],
+  ["blue-gray"]: [],
+};
 
-console.log(eye.Color) */
+console.log(eyeColor);
 
 /* ESERCIZIO 5
     Inserisci l'oggetto dei personaggi in "starWarsCharacters" nell'array corrispondente al colore dei loro occhi nell'oggetto "eyeColor" precedentemente creato.
     Utilizza uno switch statement per determinare in quale proprietà inserire il personaggio
   */
 //switch()
-
+for (let i = 0; i < starWarsCharacters.length; i++) {
+  switch (starWarsCharacters[i].eye_color) {
+    case "blue":
+      eyeColor.blue.push(starWarsCharacters[i]);
+      break;
+  }
+}
 /* ESERCIZIO 6
     Usa un while loop per calcolare la massa totale dell'equipaggio
   */
 
 let massaTot = 0;
-while (starWarsCharacters.length > 10) {
-  massaTot = massTot + starWarsCharacters[i].massa;
-  console.log("la massa totale è:", massaTot);
+let i = 0;
+while (i < starWarsCharacters.length) {
+  massaTot = massaTot + Number(starWarsCharacters[i].mass);
+  i++;
 }
+console.log("la massa totale è:", massaTot);
+
 /* ESERCIZIO 7
   
   Crea uno switch statement per rivelare la tipologia di carico, utilizzando la massa totale, di un'impotetica astronave contenente i personaggi dell'array "starWarsCharacters"
