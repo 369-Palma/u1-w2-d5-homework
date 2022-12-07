@@ -122,20 +122,29 @@ console.log(characters);
 const femaleCharacters = [];
 for (let i = 0; i < starWarsCharacters.length; i++) {
   if (starWarsCharacters[i].gender === "female") {
-    femaleCharacters.push(i);
-    console.log(
+    // femaleCharacters.push(starWarsCharacters[i]);
+    let oggetto = {
+      name: starWarsCharacters[i].name,
+      hair_color: starWarsCharacters[i].hair_color,
+      eye_color: starWarsCharacters[i].eye_color,
+    };
+    femaleCharacters.push(oggetto);
+
+    /*  console.log(
       "name:",
       starWarsCharacters[i].name + " " + "hair_color:",
       starWarsCharacters[i].hair_color + " " + "eye_color:",
       starWarsCharacters[i].eye_color
-    );
+    ); */
   }
 }
-/* ESERCIZIO 4
+console.log(femaleCharacters);
+
+/* /* ESERCIZIO 4
     Crea un oggetto "eyeColor" che abbia come proprietà: blue, yellow, brown, red, blue-gray.
     ognuna di queste proprietà contiene un array vuoto
   */
-const eyeColor = {
+/* const eyeColor = {
   blue: [],
   yellow: [],
   brown: [],
