@@ -144,7 +144,7 @@ console.log(femaleCharacters);
     Crea un oggetto "eyeColor" che abbia come proprietà: blue, yellow, brown, red, blue-gray.
     ognuna di queste proprietà contiene un array vuoto
   */
-/* const eyeColor = {
+const eyeColor = {
   blue: [],
   yellow: [],
   brown: [],
@@ -159,7 +159,7 @@ console.log(eyeColor);
     Utilizza uno switch statement per determinare in quale proprietà inserire il personaggio
   */
 //switch()
-for (let i = 0; i < starWarsCharacters.length; i++) {
+/* for (let i = 0; i < starWarsCharacters.length; i++) {
   switch (starWarsCharacters[i].eye_color) {
     case "blue":
       eyeColor.blue.push(starWarsCharacters[i]);
@@ -177,7 +177,7 @@ for (let i = 0; i < starWarsCharacters.length; i++) {
         eyeColor["blue-gray"].push(starWarsCharacters[i]);
           break;
   }
-}
+} */
 /* ESERCIZIO 6
     Usa un while loop per calcolare la massa totale dell'equipaggio
   */
@@ -204,10 +204,35 @@ console.log("la massa totale è:", massaTot);
   Una volta fatto, modifica la massa di qualche elemento dell'equipaggio e vedi se riesci ad ottenere un messaggio diverso.
   */
 
+switch (true) {
+  case massaTot < 500:
+    console.log("Ship is under loaded");
+    break;
+  case massaTot === 500:
+    console.log("Ship is half loaded");
+    break;
+  case massaTot >= 701 && massaTot <= 900:
+    console.log("Warning: Load is over 700");
+    break;
+  case massaTot >= 900 && massaTot <= 1000:
+    console.log("Critical Load: Over 900");
+    break;
+  case massaTot > 1000:
+    console.log("DANGER! OVERLOAD ALERT: Jump ship now!");
+    break;
+  default:
+    console.log("None of the previous cases");
+}
 /* ESERCIZIO 8
   
   Usa un for loop per cambiare il valore della proprietà "gender" di alcuni personaggi dal valore "n/a" a "robot" (Tip: puoi creare un nuovo array, o tentare la riassegnazione del valore corrispondente)
   */
+for (let i = 0; i < starWarsCharacters.length; i++) {
+  if (starWarsCharacters[i].gender === "n/a") {
+    starWarsCharacters[i].gender = "robot";
+  }
+}
+console.log(starWarsCharacters);
 
 /* EXTRA ESERCIZIO 9
   
@@ -218,6 +243,16 @@ console.log("la massa totale è:", massaTot);
   
   Una volta fatto, crea un console.log() per controllare la proprietà length di "characters" prima e dopo l'operazione
   */
+
+for (let i = 0; i < starWarsCharacters.length; i++) {
+  for (let index = 0; index < femaleCharacters.length; index++) {
+    if (femaleCharacters[index].name === starWarsCharacters[i].name) {
+      starWarsCharacters.splice(i, 1);
+    }
+  }
+}
+console.log("La lunghezza dell'array characters è:", starWarsCharacters.length);
+console.log(starWarsCharacters);
 
 /* EXTRA ESERCIZIO 10
   
